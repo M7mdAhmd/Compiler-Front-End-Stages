@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Compiler Analysis Tool</h1>
+            <p>Lexical • Syntax • Semantic Analysis</p>
+        </div>
+        <div class="content">
+            <div class="input-section section">
+                <div class="section-title">Source Code Input</div>
+                <textarea id="sourceCode" placeholder="Enter your source code here...
+Example:
+int x = 10;
+float y = 20.5;
+int z = x + y;
+int add(int a, int b) {
+    return a + b;
+}
+int result = add(x, z);"></textarea>
+                <div class="button-container">
+                    <button class="analyze-btn" onclick="analyzeCode()">Run Analysis</button>
+                    <button class="clear-btn" onclick="clearAll()">Clear All</button>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Lexical Analysis</div>
+                <div class="section-subtitle">Tokens</div>
+                <div id="tokensOutput" class="output-section">
+                    <div class="empty-state">
+                        <div class="empty-state-icon"></div>
+                        <p>No tokens generated yet. Run analysis to see results.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Errors & Warnings</div>
+                <div class="section-subtitle">Compilation Messages</div>
+                <div id="errorsOutput" class="output-section">
+                    <div class="empty-state">
+                        <div class="empty-state-icon"></div>
+                        <p>No errors or warnings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Syntax Tree</div>
+                <div class="section-subtitle">Abstract Syntax Tree (AST)</div>
+                <div id="syntaxTreeOutput" class="output-section">
+                    <div class="empty-state">
+                        <div class="empty-state-icon"></div>
+                        <p>No syntax tree generated yet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Semantic Tree</div>
+                <div class="section-subtitle">Annotated AST</div>
+                <div id="semanticTreeOutput" class="output-section">
+                    <div class="empty-state">
+                        <div class="empty-state-icon"></div>
+                        <p>No semantic tree generated yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
